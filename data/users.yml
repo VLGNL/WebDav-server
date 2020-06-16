@@ -1,0 +1,20 @@
+Vincent_Gerla:
+  Naam: "test"
+  Password: "$2a$10$o69fQTWgyb0muLieqUgGkuOwVwVSwfAoD4ez8ITvqQiSjqwkhaP9q"
+  Email: "vlgerlanl@gmail.com"
+  Rights:
+    - ALL
+  Web:
+    Perms:
+      - ALL
+  ID: 0
+Rob_Heijne:
+  Naam: "test2"
+  Password: "test"
+  Email: "rob@gmail.com"
+  Rights:
+    - ALL
+  Web:
+    Perms:
+      - ALL
+  ID: 1

@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "removeComments": true
+    },
+    "include": [
+        "**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "**/*.spec.ts"
+    ]
+}

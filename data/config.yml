@@ -1,0 +1,11 @@
+Company:
+  Name: "VLGNL"
+  StartYear: 2020
+MainSite: "404"
+
+WebDav:
+  GuestSystem:
+    enabled: true
+Web:
+  NameInTitle: "VLGNL"
+  Logo: "https://cdn.discordapp.com/avatars/615629395654344735/97c23fe35eba6adcbd39c48ebd70ee9a.png"
