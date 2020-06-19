@@ -1,0 +1,9 @@
+Vincent Gerla:
+  Naam: "test"
+  Password: "$2a$10$o69fQTWgyb0muLieqUgGkuOwVwVSwfAoD4ez8ITvqQiSjqwkhaP9q"
+  Email: "info@vlgnl.ga"
+  Rights:
+    - ALL
+  Web:
+    Perms:
+      - ALL

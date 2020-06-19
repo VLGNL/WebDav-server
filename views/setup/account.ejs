@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../head', {title: "Setup"}) -%>
+</head>
+<body class="container">
+    <div class="columns">
+        <div class="column">
+            <form action="/setup/account" method="POST">
+                <div class="columns">
+                    <div class="column">
+                        <div class="field has-addons">
+                            <p class="control">
+                                <a class="button is-static">
+                                Email: 
+                                </a>
+                            </p>
+                            <p class="control is-expanded">
+                                <input name="email" class="input" type="text" placeholder="Enter a Email">
+                            </p>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="field has-addons">
+                            <p class="control">
+                                <a class="button is-static">
+                                Naam: 
+                                </a>
+                            </p>
+                            <p class="control is-expanded">
+                                <input name="name" class="input" type="text" placeholder="Enter a Email">
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="columns">
+                    <div class="column">
+                        <div class="field has-addons">
+                            <p class="control">
+                                <a class="button is-static">
+                                Password: 
+                                </a>
+                            </p>
+                            <p class="control is-expanded">
+                                <input name="password" class="input" type="password" placeholder="Enter a password">
+                            </p>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="field has-addons">
+                            <p class="control">
+                                <a class="button is-static">
+                                Confirm: 
+                                </a>
+                            </p>
+                            <p class="control is-expanded">
+                                <input class="input" type="password" placeholder="Confirm password">
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <p class="control">
+                    <button class="button is-success is-fullwidth">
+                        Login
+                    </button>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

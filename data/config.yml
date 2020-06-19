@@ -1,3 +1,4 @@
+Setup: true
 Company:
   Name: "VLGNL"
   StartYear: 2020
@@ -9,3 +10,5 @@ WebDav:
 Web:
   NameInTitle: "VLGNL"
   Logo: "https://cdn.discordapp.com/avatars/615629395654344735/97c23fe35eba6adcbd39c48ebd70ee9a.png"
+Security:
+  CheckFree: 5

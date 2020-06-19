@@ -3,48 +3,33 @@ var session = require('cookie-session')
 import * as yaml from 'js-yaml';
 import * as fs from 'fs';
 import * as bcrypt from 'bcryptjs';
+import * as ownf from "./functions";
 
 const router = express.Router();
 
+try {
+    var Config = yaml.safeLoad(fs.readFileSync('./data/config.yml', 'utf8'));
+} catch (e) {
+    console.log(e);
+}
 
 router.use(function (req, res, next) {
-    if(req.session.user_CheckFree < 1) {
-        console.log("tesqst");
-        req.session.user_CheckFree = 3;
+    if(req.session.user_email === undefined || req.session.user_CheckFree === undefined
+        || req.session.user_Password === undefined) {
+        res.redirect('/login')
+        console.log("tesqasaswst");
+    } else if(req.session.user_CheckFree < 1) {
+        ownf.checkuser(req, res, next);
+        next();
     } else {
-        console.log("test");
+        console.log("testas");
         req.session.user_CheckFree--;
+        next();
     }
 })
 
 router.get("/", (req, res)=>{
     res.status(200).send("hello");
-});
-
-// Access the session as req.session
-router.get('/e', function(req, res, next) {
-    if(req.session.views) {
-        req.session.views++
-        res.setHeader('Content-Type', 'text/html')
-        res.write('<p>view: ' + req.session.view + '</p>')
-        res.write('<p>views: ' + req.session.views + '</p>')
-        res.end()
-    } else {
-        req.session.views = 1
-        res.end('welcome to the session demo. refresh!')
-    }
-});
-router.get('/a', function(req, res, next) {
-    if(req.session.view) {
-        req.session.view++
-        res.setHeader('Content-Type', 'text/html')
-        res.write('<p>view: ' + req.session.view + '</p>')
-        res.write('<p>views: ' + req.session.views + '</p>')
-        res.end()
-    } else {
-        req.session.view = 1
-        res.end('welcome to the session demo. refresh!')
-    }
 });
 
 module.exports = router;
